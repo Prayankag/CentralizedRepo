@@ -3,13 +3,13 @@
 variable "resource_group_name" {
   description = "The name of the Azure resource group"
   type        = string
-  default     = "vam-rg-nov"
+  default     = "Geicoautomationscript"
 }
 
 #variable "location" {
   #description = "The Azure region where resources will be created"
   #type        = string
-  #default     = "West US 2"
+  #default     = "East US"
 #}
 
 variable "app_service_plan_name" {
@@ -46,9 +46,22 @@ variable "client_id" {
 }
 variable "client_secret" {
   type        = string
-  default     = "QEt8Q~el5WQ8JWv56IsRMvM5mSJeMHsflwyEJbQ7"  # Use "Windows" for a Windows app
-}
+  default     = " "
+  }
 variable "tenant_id" {
   type        = string
   default     = "13085c86-4bcb-460a-a6f0-b373421c6323"  # Use "Windows" for a Windows app
+}
+# Define the Key Vault name (assuming Key Vault is created manually)
+variable "key_vault_name" {
+  description = "The name of the Azure Key Vault"
+  type        = string
+  default     = "GitHubKVault"  # Name of your manually created Key Vault
+}
+
+# Define the name of the secret to store in Key Vault
+variable "secret_name" {
+  description = "The name of the secret to store in Key Vault"
+  type        = string
+  default     = "clientsecret1"
 }
